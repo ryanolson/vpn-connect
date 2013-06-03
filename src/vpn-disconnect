@@ -1,0 +1,11 @@
+#
+# http://superuser.com/questions/358513
+#
+on run argv
+   tell application "System Events"
+        tell current location of network preferences
+                set VPN to service "Cray"
+                if exists VPN then disconnect VPN
+        end tell
+    end tell
+end run

@@ -1,0 +1,13 @@
+#
+# https://discussions.apple.com/thread/2184848
+#
+on run argv
+  tell application "System Events"
+    connect service "Cray" of current location of network preferences 
+    delay 3
+    keystroke item 1 of argv
+    key code 36
+    delay 3
+    key code 36 
+  end tell 
+end run
